@@ -1,0 +1,13 @@
+import java.util.ArrayList;
+
+public class Discipline {
+	String name;
+	String cod;
+	int credits;
+	boolean elective;
+	boolean offered;
+	int creditsMin;
+	ArrayList<Discipline> prerequisites;
+	String teacher;
+	
+}

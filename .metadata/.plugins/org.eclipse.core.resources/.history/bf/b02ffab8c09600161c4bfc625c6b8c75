@@ -1,0 +1,31 @@
+import java.util.ArrayList;
+public class Main {
+	ArrayList<Department> departments = new ArrayList<Department>();
+	ArrayList<Discipline> disciplines = new ArrayList<Discipline>();
+	public void initDB(){
+		Discipline discipline = new Discipline("Laboratório de Programação I", "INF 1622",
+				70, false, true, 0 , "Arndt Von Staa");
+		disciplines.add(discipline);
+		
+		discipline = new Discipline("Estruturas de Dados", "INF 1620", 60
+				, false, false, 0, "Marcus Poggi");
+		disciplines.add(discipline);
+		
+		discipline = new Discipline("Projeto de Sistema de Software I", "INF 1624",40
+				, true, true, 0, "Carlos Lucena");
+		discipline.getPrerequisites().add("INF 1620");
+		discipline.getPrerequisites().add("INF 1628");
+
+		disciplines.add(discipline);
+		
+		
+		
+		
+	}
+
+	public static void main(String[] args) {
+		
+
+	}
+
+}

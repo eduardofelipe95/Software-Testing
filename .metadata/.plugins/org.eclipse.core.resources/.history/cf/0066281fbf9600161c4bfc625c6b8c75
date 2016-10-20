@@ -1,0 +1,15 @@
+import java.util.ArrayList;
+public class Main {
+	ArrayList<Department> departments = new ArrayList<Department>();
+	ArrayList<Discipline> disciplines = new ArrayList<Discipline>();
+	public void initDB(){
+		Discipline discipline = new Discipline("Laboratório de Programação I", "INF 1622",
+				70, false, true, 0 , Arndt Von Staa);
+	}
+
+	public static void main(String[] args) {
+		
+
+	}
+
+}

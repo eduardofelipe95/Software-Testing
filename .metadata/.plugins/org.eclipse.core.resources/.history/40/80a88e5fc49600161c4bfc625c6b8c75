@@ -1,0 +1,21 @@
+import java.util.ArrayList;
+
+public class Secretary {
+	Course course;
+	ArrayList<Discipline> disciplinesOffered;
+	
+	public Course getCourse() {
+		return course;
+	}
+	public void setCourse(Course course) {
+		this.course = course;
+	}
+	public ArrayList<Discipline> getDisciplinesOffered() {
+		return disciplinesOffered;
+	}
+	public void setDisciplinesOffered(ArrayList<Discipline> disciplinesOffered) {
+		this.disciplinesOffered = disciplinesOffered;
+	}
+	
+	
+}

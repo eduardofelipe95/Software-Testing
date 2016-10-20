@@ -1,0 +1,70 @@
+import java.util.ArrayList;
+
+public class Student {
+	String name;
+	int registration;
+	int requiredCredits;
+	int electiveCredits;
+	String course;
+	ArrayList<String> completedDisciplines;
+	
+	public Student(String name,	int registration, int requiredCredits, int electiveCredits, String course, ArrayList<String> completedDisciplines) {
+		this.completedDisciplines = completedDisciplines;
+		this.name = name;
+		this.registration = registration;
+		this.requiredCredits = requiredCredits;
+		this.electiveCredits = electiveCredits;
+		this.course = course;
+	}
+	
+	public void print(){
+		System.out.println("Nome: " + this.name + "\n" + "Matrícula: " + 
+	this.registration + "\n" + "Créditos cumpridos obrigatórios: " + this.requiredCredits +  "\n" +
+				"Créditos cumpridos eletivos: " + "\n" + this.electiveCredits + "Curso: " + this.course);
+	System.out.print("Disciplinas cursadas: ");
+		for(int i = 0; i < this.completedDisciplines.size(); i++){
+			System.out.println(this.completedDisciplines);
+		}
+		
+	}
+	
+	
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public int getRegistration() {
+		return registration;
+	}
+	public void setRegistration(int registration) {
+		this.registration = registration;
+	}
+	public int getRequiredCredits() {
+		return requiredCredits;
+	}
+	public void setRequiredCredits(int requiredCredits) {
+		this.requiredCredits = requiredCredits;
+	}
+	public int getElectiveCredits() {
+		return electiveCredits;
+	}
+	public void setElectiveCredits(int electiveCredits) {
+		this.electiveCredits = electiveCredits;
+	}
+	public String getCourse() {
+		return course;
+	}
+	public void setCourse(String course) {
+		this.course = course;
+	}
+	public ArrayList<String> getCompletedDisciplines() {
+		return completedDisciplines;
+	}
+	public void setCompletedDisciplines(ArrayList<String> completedDisciplines) {
+		this.completedDisciplines = completedDisciplines;
+	}
+	
+	
+}

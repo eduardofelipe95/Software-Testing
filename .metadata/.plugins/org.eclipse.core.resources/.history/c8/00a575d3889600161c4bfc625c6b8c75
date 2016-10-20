@@ -1,0 +1,13 @@
+import java.util.ArrayList;
+public class Main {
+	Arraylist<Department> d;
+	public void initDB(){
+		
+	}
+
+	public static void main(String[] args) {
+		
+
+	}
+
+}

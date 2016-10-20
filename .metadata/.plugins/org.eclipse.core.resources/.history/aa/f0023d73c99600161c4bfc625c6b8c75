@@ -1,0 +1,27 @@
+import java.util.ArrayList;
+
+public class Department {
+	Postgraduation postgraduation;
+	Graduation graduation;
+	ArrayList<Student> students = new ArrayList<Student>();
+	
+	public Department() {
+		
+		this.postgraduation = null;
+		this.graduation = null;
+	}
+	
+	public Postgraduation getPostgraduation() {
+		return postgraduation;
+	}
+	public void setPostgraduation(Postgraduation postgraduation) {
+		this.postgraduation = postgraduation;
+	}
+	public Graduation getGraduation() {
+		return graduation;
+	}
+	public void setGraduation(Graduation graduation) {
+		this.graduation = graduation;
+	}
+	
+}

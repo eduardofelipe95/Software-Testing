@@ -1,0 +1,7 @@
+
+public class Student {
+	String name;
+	int registration;
+	int requiredCredits;
+	int electiveCredits;
+}

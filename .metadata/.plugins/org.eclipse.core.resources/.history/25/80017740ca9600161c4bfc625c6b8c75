@@ -1,0 +1,143 @@
+import java.util.ArrayList;
+public class Main {
+	ArrayList<Department> departments = new ArrayList<Department>();
+	ArrayList<Discipline> disciplines = new ArrayList<Discipline>();
+	ArrayList<Student> students = new ArrayList<Student>();
+	
+	public void initDB(){
+		//Disciplinas da pós-graduação
+		Discipline discipline = new Discipline("Hipermídia Adaptativa", "INF 1303",
+				30, true, true, 0 , "Daniel Schawbe");
+		disciplines.add(discipline);
+	
+		//Disciplinas da pós-graduação
+		
+		Course course = new Course();
+		course.setName("Doutorado – Informática");
+		course.setDisciplines(disciplines);
+		
+		Postgraduation postgraduation = new Postgraduation();
+		postgraduation.setCourse(course);
+		
+		disciplines = new ArrayList<Discipline>(disciplines);
+		
+		//Disciplinas de graduação
+		discipline = new Discipline("Laboratório de Programação I", "INF 1622",
+				70, false, true, 0 , "Arndt Von Staa");
+		disciplines.add(discipline);
+		
+		discipline = new Discipline("Estruturas de Dados", "INF 1620", 60
+				, false, false, 0, "Marcus Poggi");
+		disciplines.add(discipline);
+		
+		discipline = new Discipline("Projeto de Sistema de Software I", "INF 1624",40
+				, true, true, 0, "Carlos Lucena");
+		discipline.getPrerequisites().add("INF 1620");
+		discipline.getPrerequisites().add("INF 1628");
+		disciplines.add(discipline);
+		
+		discipline = new Discipline("Programação em ponto grande", "INF 1628",50
+				, true, true, 0, "Arndt von Staa");
+		discipline.getPrerequisites().add("INF 1620");
+		disciplines.add(discipline);
+		
+		discipline = new Discipline("Introdução a Ciência da Computação", "INF 1001",40
+				, false, true, 0, "Bruno Feijó");
+		disciplines.add(discipline);
+		
+		discipline = new Discipline("Cálculo Numérico", "INF 1002",40
+				, false, true, 100, "Marcus Poggi");
+		disciplines.add(discipline);
+		
+		discipline = new Discipline("Software Básico", "INF 1600",50
+				, true, true, 40, "Arndt von Staa");
+		disciplines.add(discipline);	
+		//Disciplinas de graduação
+		course = new Course();
+		course.setName("Engenharia de Computação");
+		course.setDisciplines(disciplines);
+		
+		/*
+		course = new Course();
+		course.setName("Bacharelado");
+		course.setDisciplines(disciplines);
+		*/
+		
+		Graduation graduation = new Graduation();
+		graduation.setCourse(course);
+		
+		Department department = new Department();
+		
+		department.setGraduation(graduation);
+		department.setPostgraduation(postgraduation);
+		
+		departments.add(department);
+		
+		/////////////////////////
+		
+		disciplines = new ArrayList<Discipline>();
+		
+		discipline = new Discipline("Inglês I", "LET 1501", 30, false, true, 0, "Ângela Souza");
+		disciplines.add(discipline);
+		
+		course = new Course();
+		course.setName("Português–Inglês");
+		course.setDisciplines(disciplines);
+		
+		graduation = new Graduation();
+		graduation.setCourse(course);
+		
+		department = new Department();
+		department.setGraduation(graduation);
+		
+		departments.add(department);
+		
+		//Cadastro de alunos
+		ArrayList<String> list = new ArrayList<String>();
+		list.add("INF1620");
+		list.add("INF1628");
+		list.add("INF1622");
+		
+		Student student = new Student("Alex Carvalho", 98124812, 130, 50, "Engenharia de Computação", list);
+		students.add(student);
+		
+		list = new ArrayList<String>();
+		list.add("INF1620");
+		list.add("INF101");
+		student = new Student("Jurema Torres", 9924812, 100, 0, "Engenharia de Computação", list);
+		students.add(student);
+		
+		list = new ArrayList<String>();
+		student = new Student("José Vasconcelos", 9915918, 0, 0, "Bacharelado", list);
+		students.add(student);
+		
+		list = new ArrayList<String>();
+		student = new Student("João da Silva", 9914918, 0, 0, "Doutorado–Informática", list);
+		students.add(student);
+		
+		for(int i = 0; i < departments.size(); i++){
+			if(departments.get(i).getName().equals("Informática")){
+				departments.get(i).setStudents(students);
+				students = new ArrayList<Student>();
+			}
+		}
+		
+		
+		
+		//Cadastro de alunos
+		
+		
+		
+		
+		
+		
+		
+		
+	}
+
+	public static void main(String[] args) {
+		
+
+	}
+
+}
